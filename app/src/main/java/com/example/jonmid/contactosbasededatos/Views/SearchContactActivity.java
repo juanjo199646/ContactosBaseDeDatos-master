@@ -91,12 +91,16 @@ public class SearchContactActivity extends AppCompatActivity {
 
         SQLiteDatabase  db  =  sqliteHelper.getReadableDatabase();
 
-        db.execSQL("UPDATE users SET name ="+"'" + editTextName.getText().toString()+"'"+"" +
+        db.execSQL("UPDATE users SET name ="+"'" +
+                editTextName.getText().toString()+"'"+"" +
                 ",phone="+"'"+editTextPhone.getText()+"'"+
                 ",email="+"'"+ editTextEmail.getText()+"'"+
                 "WHERE id="+idContact);
 
        Toast.makeText(this ,"actualizar contacto"+idContact,Toast.LENGTH_SHORT).show();
+
+
+        // regresar a la pantalla principal ya actualizado
 
         Intent intent = new Intent(this, ContactsActivity.class);
         startActivity(intent);
