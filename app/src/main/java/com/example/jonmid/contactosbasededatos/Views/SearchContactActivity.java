@@ -87,11 +87,14 @@ public class SearchContactActivity extends AppCompatActivity {
     }
 
 
-    public  void  updateContact(){
-        SQLiteDatabase  db=  sqliteHelper.getReadableDatabase();
+    public  void  UpdateContac(View view){
 
-        db.execSQL("UPDATE users SET name ="+"'" + editTextName.getText().toString()+"'"+",phone="+"'"+editTextPhone.getText()+"'"+
-        ",email="+"'"+ editTextEmail.getText()+"'"+ "WHERE id="+idContact);
+        SQLiteDatabase  db  =  sqliteHelper.getReadableDatabase();
+
+        db.execSQL("UPDATE users SET name ="+"'" + editTextName.getText().toString()+"'"+"" +
+                ",phone="+"'"+editTextPhone.getText()+"'"+
+                ",email="+"'"+ editTextEmail.getText()+"'"+
+                "WHERE id="+idContact);
 
        Toast.makeText(this ,"actualizar contacto"+idContact,Toast.LENGTH_SHORT).show();
 

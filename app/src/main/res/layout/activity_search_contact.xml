@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:text="Actualizar Contacto"
                 android:theme="@style/RaisedButtonDark"
-                android:onClick="updateContact"/>
+                android:onClick="UpdateContac"/>
 
 
         </LinearLayout>
