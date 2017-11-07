@@ -88,8 +88,11 @@ public class SearchContactActivity extends AppCompatActivity {
 
 
     public  void  UpdateContac(View view){
-
+        // de donde se resive la informacion
         SQLiteDatabase  db  =  sqliteHelper.getReadableDatabase();
+
+
+        // seleccionar los campos que se van a actualizar
 
         db.execSQL("UPDATE users SET name ="+"'" +
                 editTextName.getText().toString()+"'"+"" +
